@@ -9,7 +9,7 @@ var logger = require('morgan');
  var app = express();
  
  app.use(express.static(path.join(__dirname, 'build')));
-
+//run npm run build in react command it will generate one build folder 
  app.get(['/','/register'], function (req, res) {
    res.sendFile(path.join(__dirname, 'build', 'index.html'));
  });
